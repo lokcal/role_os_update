@@ -1,0 +1,7 @@
+---
+galaxy_info:
+  role_name: ansible_user
+  author: Me
+  description: Add ansible SSH User
+  min_ansible_version: 3.0
+  platforms: Arch

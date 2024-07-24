@@ -1,0 +1,13 @@
+---
+- name: Check update and upgrade system
+  community.general.pacman:
+    update_cache: true
+    upgrade: true
+  when: ansible_os_family == "Archlinux"
+
+- name: Run the equivalent of "pacman -S --asexplicit", mark foo as explicit and install it if not present
+  community.general.pacman:
+    name: foo
+    state: present
+    reason: explicit
+    reason_for: all
